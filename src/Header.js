@@ -1,6 +1,8 @@
 import React from 'react';
 import Logo from "./Logo";
 import TopMenuItem from "./topMenuItem";
+import "./CSS/header.css";
+
 
 function Header(props) {
     return (
@@ -13,7 +15,9 @@ function Header(props) {
                     </button>
                     <div className="collapse navbar-collapse" id="navRes">
                         <ul className="navbar-nav ml-auto">
-                            {props.topMenu.map(el => <TopMenuItem key={el} item={el}/>)}
+
+                                {props.topMenu.map(el => <TopMenuItem key={el} item={el}/>)}
+
                         </ul>
                     </div>
                 </div>
