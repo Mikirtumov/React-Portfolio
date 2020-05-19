@@ -1,26 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Header from "./Header";
+import Container from "./Container";
+import Footer from "./Footer";
+import 'bootstrap/dist/css/bootstrap.css';
+
+
+
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const appVersion = " 0.2.321";
+    const topMenu = ["HOME", "ABOUT", "SERVICES", "BLOG", "WORK", "CONTACT"];
+    const footerMenu = ["facebook","github","linkedin"];
+
+
+
+    return (
+        <div className="App">
+            <Header topMenu={topMenu}/>
+            <Container v={appVersion}/>
+            <Footer footerMenu={footerMenu}/>
+
+        </div>
+    );
 }
 
 export default App;
